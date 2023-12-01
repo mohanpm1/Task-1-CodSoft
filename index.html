@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohan's portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/664529584e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="script.js"></script>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/m2.png" alt="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>                    
+                    <li><a href="#contact">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi,I'm <span>Mohan</span><br>From Banglore</h1>
+                <a href="Mohan P M.pdf" class="btn btn2">Download CV</a>
+            </div>
+        </div>
+    </div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/unnamed.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a Computer Science engineering student pursuing my 3rd year engineering in Dsatm,Banglore.I consider my self a responsible and orderly person and I am looking foward for my first work experience.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link">Skills</p>
+                    
+                </div>
+                <div class="tab-contents active-tab" >
+                    <ul>
+                        <li><span>Web development</span><br></li>
+                        <li><span>HTML5 and CSS</span><br></li>
+                        <li><span>Javascript</span><br></li>
+                        <li><span>Graphic design</span><br></li>
+                    </ul>
+                </div>
+                <div class="tab-contents">
+                    <p class="tab-links">Education</p>
+                    <ul>
+                        <li><span>2021-25</span><br>Computer Science Engineering at Dayanada Sagar Academy Of Technology and Management, Banglore</li>
+                        <li><span>2021</span><br>12 th class at Sri Aurobindo ind P U college,Shivamogga,Karnataka</li>
+                        <li><span>2019</span><br>10 th class at Royal Apollo International School,Hassan,Karnataka</li>
+                     
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>mohanpm1221@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9353883868</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/mohann.____"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/mohan-p-m-352a25299/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/mohanpm1"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+                <a href="Mohan P M.pdf" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+               <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="Email" name="email" placeholder="Your email" required>
+                <textarea name="Message"  cols="30" rows="10" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">submit</button>
+               </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright Mohan P M Made with <i class="fa-solid fa-heart"></i> by easy tutorials</p>
+    </div>
+</div>
+<script>
+    const scriptURL = https://script.google.com/macros/s/AKfycbyANydyMzJITiB8UCM-7Gwq8pBH1_1MqNwCc81lV5Xg88PuExFMEc1uh5K5MCmgOqtP/exec
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+
+    
+</body>
+</html>
